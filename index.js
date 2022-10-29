@@ -42,20 +42,22 @@ function App() {
         <div className="jumbotron">
           <div className="card">
             <div className="card-header">
-              <h2>Inspirational Quotes</h2>
+              <h2 class="text-center">Inspirational Quotes</h2>
             </div>
             <div className="card-body"></div>
             {randomQuote ? (
               <>
-                <p className="card-title">
+                <p className="card-title text-center">
                   - {randomQuote.author || "No author"}
                 </p>
-                <h5 className="card-text">&quot;{randomQuote.text}&quot;</h5>
+                <h5 className="card-text  text-center">
+                  &quot;{randomQuote.text}&quot;
+                </h5>
               </>
             ) : (
               <h2>Loading</h2>
             )}
-            <div className="row">
+            <div className="row d-flex justify-content-center">
               <button
                 onClick={getNewQuote}
                 className="btn btn-primary ml-4 mb-3"
@@ -71,7 +73,7 @@ function App() {
                 }
                 target="_blank"
               >
-                <i className="fa fa-twitter ml-4"></i>
+                <i className="fa fa-twitter mt-1 ml-4 fa-2x"></i>
               </a>
             </div>
           </div>

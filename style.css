@@ -1,0 +1,14 @@
+* {
+  transition: all 1.5s ease-in-out;
+}
+* {
+  font-family: "Courier New";
+}
+h2 {
+  font-weight: bolder;
+  font-size: 250%;
+}
+.jumbotron {
+  box-shadow: 0 20px 20px rgb(0 0 0 / 0.2);
+  background-color: white#;
+}
