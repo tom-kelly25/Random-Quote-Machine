@@ -12,6 +12,11 @@ function App() {
     fetchData();
   }, []);
 
+  const getNewQuote = () => {
+    let randIndex = Math.floor(Math.random() * quote.length);
+    setRandomQuote(quote[randIndex]);
+  };
+
   return (
     <div>
       <div className="container pt-5">
@@ -31,6 +36,22 @@ function App() {
             ) : (
               <h2>Loading</h2>
             )}
+            <div className="row">
+              <button onClick={getNewQuote} className="btn btn-primary ml-4">
+                New Quote
+              </button>
+              <a
+                href={
+                  "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
+                  encodeURIComponent(
+                    '"' + randomQuote.text + '" ' + randomQuote.author
+                  )
+                }
+                target="_blank"
+              >
+                <i className="fa fa-twitter ml-4"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
