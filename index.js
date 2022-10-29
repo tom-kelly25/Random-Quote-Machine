@@ -15,11 +15,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      Hello World
-      {quotes.map((quote) => (
-        <div>{quote.text}</div>
-      ))}
+    <div className="container pt-5">
+      <div className="jumbotron">
+        <div className="card">
+          <div className="card-header">Inspirational Quotes</div>
+          <div className="card-body"></div>
+        </div>
+      </div>
     </div>
   );
 }
